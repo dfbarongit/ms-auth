@@ -10,7 +10,7 @@ $routers = require __DIR__.'/../app/Presentation/Routers/endpoints.php';
 $app = AppFactory::create();
 
 $routers($app);
-$app->get('/', function (Request $request, Response $response, $args) {
+/*$app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hello world!");
     return $response;
 });
@@ -28,7 +28,7 @@ $app->post('/saludo', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hola $edad, tu edad es $nombre");
     #$response->getBody()->write("Hello world! Desde inicio");
     return $response;
-});
+});*/
 
 $cors = require __DIR__ . '/../app/global/cors_config.php';
 $cors($app);
