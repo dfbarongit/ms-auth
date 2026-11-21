@@ -1,0 +1,27 @@
+### Iniciar sesión con usuario o correo
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+  "usuario": "usuario_existente",
+  "contrasena": "contraseña"
+}
+### Iniciar sesión con usuario o correo
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+  "usuario": "admin",
+  "contrasena": "admin123"
+}
+
+###hola mundo
+GET http://127.0.0.1:8000/
+
+### Validar sesión (microservicios protegidos deben comprobar esta respuesta)
+GET http://127.0.0.1:8000/auth/validate
+Authorization: Bearer {{access_token}}
+
+### Cerrar sesión
+POST http://127.0.0.1:8000/auth/logout
+Authorization: Bearer {{access_token}}
